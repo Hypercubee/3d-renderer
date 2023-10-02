@@ -80,7 +80,7 @@ class Cube {
 	}
 	drawFaces() {
 		this.faces.sort((a, b) => {
-			return (this.points[b.x].z + this.points[b.y].z + this.points[b.z].z) - (this.points[a.x].z + this.points[a.y].z + this.points[a.z].z);
+			return (this.points[b.x].z + this.points[b.y].z + this.points[b.z].z) - (this.points[a.x].z + this.points[a.y].z + this.points[a.z].z)
 		})
 		for (let i = 0; i < this.faces.length; i++) {
 			let face = this.faces[i];
@@ -140,3 +140,8 @@ class Hypercube extends Cube {
 	}
 }
 
+function secondMax(...args){
+	let max = Math.max(...args);
+	args.splice(args.indexOf(max),1);
+	return Math.max(args);
+}

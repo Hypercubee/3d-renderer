@@ -6,8 +6,7 @@ class Vector2 {
 	 * creates a 2d vector object
 	 */
 	constructor(x, y) {
-		this.x = x;
-		this.y = y;
+		this.set(x,y)
 	}
 	set x(x) {
 		if (x !== undefined) this.#vars[0] = x;
@@ -44,9 +43,7 @@ class Vector3 {
 	 * creates a 3d vector object
 	 */
 	constructor(x, y, z) {
-		this.x = x;
-		this.y = y;
-		this.z = z;
+		this.set(x,y,z);
 	}
 	set x(x) {
 		if (x !== undefined) this.#vars[0] = x;
@@ -108,10 +105,7 @@ class Vector4 {
 	 * creates a 4d vector object
 	 */
 	constructor(x, y, z, w) {
-		this.x = x;
-		this.y = y;
-		this.z = z;
-		this.w = w;
+		this.set(x,y,z,w)
 	}
 	set x(x) {
 		if (x !== undefined) this.#vars[0] = x;
@@ -148,7 +142,7 @@ class Vector4 {
 	 * @param {number} w
 	 * sets a 4d vector object
 	 */
-	set(x, y, z) {
+	set(x, y, z, w) {
 		this.x = x;
 		this.y = y;
 		this.z = z;
